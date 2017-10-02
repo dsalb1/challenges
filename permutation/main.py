@@ -1,15 +1,15 @@
 
 #function prints out every permutation of a string in alphabetical order
-def permutation(str, prefix=""):
+def permutation(str, perm=""):
     str = sorted(str)
     
     if not len(str):
         #prints each permutation, followed by a comma, on a single line
-        print(prefix + ", ", end='')
+        print(perm + ", ", end='')
         
     else:
         for i in range(len(str)):
-            permutation(str[:i] + str[i+1:], prefix + str[i])
+            permutation(str[:i] + str[i+1:], perm + str[i])
 
 #reads a file and creates a list of each line in the file
 def read_file(file_name):
